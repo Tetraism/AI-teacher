@@ -7,4 +7,4 @@ pyinstaller --onefile --windowed --uac-admin --name MoreAI --add-data "web;web" 
 # Stage 2: the installer - copies MoreAI.exe into place and creates Start Menu/Desktop shortcuts
 pyinstaller --onefile --windowed --name MoreAI-Setup --add-data "dist/MoreAI.exe;." installer.py
 
-Write-Host "התקנה מוכנה: dist\MoreAI-Setup.exe (זה הקובץ להפצה - הוא מטמיע את MoreAI.exe בתוכו)"
+Write-Host "Installer ready: dist\MoreAI-Setup.exe (this is the file to distribute - it embeds MoreAI.exe)"
