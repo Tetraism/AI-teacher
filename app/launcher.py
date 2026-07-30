@@ -12,6 +12,10 @@ import urllib.request
 import webbrowser
 from pathlib import Path
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 OLLAMA_HOST = "http://127.0.0.1:11434"
 WEB_PORT = 8765
 OLLAMA_INSTALLER_URL = "https://ollama.com/download/OllamaSetup.exe"
