@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>המורה שלי — AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <h1>המורה שלי</h1>
+    </div>
+    <div class="status" id="status">מתחבר למודל...</div>
+    <button class="clear-btn" id="clearBtn" title="התחלת שיחה חדשה">שיחה חדשה</button>
+  </header>
+
+  <main class="chat-wrap">
+    <div class="download-overlay" id="downloadOverlay">
+      <div class="download-card">
+        <div class="spinner"></div>
+        <h2 id="downloadTitle">מכין את המודל...</h2>
+        <p id="downloadSub" class="muted">בודק אם המודל כבר מותקן</p>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-label" id="progressLabel"></div>
+      </div>
+    </div>
+
+    <div class="chat" id="chat">
+      <div class="msg assistant">
+        <div class="bubble">
+          שלום! 👋 אני המורה שלך, ואני רץ כולו במחשב שלך — בלי אינטרנט ובלי שיתוף מידע עם אף אחד.
+          <br>על מה תרצה/י ללמוד היום? אפשר להדביק תרגיל, לשאול שאלה, או פשוט לכתוב נושא ואני אתאים את ההסבר לרמה שלך.
+        </div>
+      </div>
+    </div>
+
+    <div class="suggestions" id="suggestions">
+      <button class="chip">תסביר לי מושג שאני לא מבין</button>
+      <button class="chip">עזור לי לפתור תרגיל שלב-אחר-שלב</button>
+      <button class="chip">תבחן אותי על נושא שלמדתי</button>
+      <button class="chip">תכין לי תוכנית לימוד קצרה</button>
+    </div>
+
+    <form class="composer" id="composer">
+      <textarea id="input" placeholder="כתוב/י כאן שאלה או נושא ללימוד..." rows="1" autofocus></textarea>
+      <button type="submit" id="sendBtn" aria-label="שלח">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
